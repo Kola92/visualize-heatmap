@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visualize With A Heat Map</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="shortcut icon"
+      href="./img/heatmap-favicon.png"
+      type="image/png"
+    />
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+  </head>
+  <body>
+    <h1 id="title">HEAT MAP FOR GLOBAL TEMPERATURE</h1>
+    <h4 id="description">
+      Global Temperature from 1753 to 2015. Base Temperature is
+      8.66<sup>o</sup>C
+    </h4>
+    <div id="tooltip"></div>
+    <svg id="canvas"></svg>
+
+    <svg id="legend">
+      <g>
+        <rect x="10" y="0" width="40" height="40" fill="#0113b9"></rect>
+        <text x="60" y="20" fill="whitesmoke">Variance of -1 or less</text>
+      </g>
+
+      <g>
+        <rect x="10" y="40" width="40" height="40" fill="#00b4ff"></rect>
+        <text x="60" y="60" fill="whitesmoke">On or Below Average</text>
+      </g>
+      <g>
+        <rect x="10" y="80" width="40" height="40" fill="#ffa900"></rect>
+        <text x="60" y="100" fill="whitesmoke">Above Average</text>
+      </g>
+      <g>
+        <rect x="10" y="120" width="40" height="40" fill="#e42941"></rect>
+        <text x="60" y="140" fill="whitesmoke">Variance of +1 or more</text>
+      </g>
+    </svg>
+  </body>
+  <script src="app.js"></script>
+  <script
+    defer
+    src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
+  ></script>
+</html>
